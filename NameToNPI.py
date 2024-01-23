@@ -1,7 +1,7 @@
 import requests
 import json
-import pandas as pd
-import numpy as np
+import pandas
+import numpy
 from flatten_json import flatten
 
 
@@ -18,7 +18,7 @@ g = requests.get('https://npiregistry.cms.hhs.gov/api/?number=&enumeration_type=
 print(arez)
 print('-----------------')
 print(b.text)
-rpint('-----------------')
+print('-----------------')
 print(c.text)
 print('-----------------')
 print(d.text)

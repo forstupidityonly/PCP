@@ -1,5 +1,4 @@
 # PCP
 Primary care physician 
 
-pip install pandas
-pip install flatten_json
+There are no python  libs needed ATM

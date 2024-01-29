@@ -8,18 +8,25 @@ def fileTransform(fileName=""):
 
     with open(fileName, "r") as file:
         content = file.read()
-    pattern = r"NM1\*P3\*1\*.+~"
-    matches = re.findall(pattern, content)
     
-    modMatches = matches
-    modStr = '****XX*'
-    for i in modMatches:
-        NameArr = i[9:-1].split('*')
+    pattern = r"NM1\*P3\*1\*.+~"
+    matches = re.findall(pattern, content) 
+    modMatches = matches[:]
+    modStr = "****XX*"
+    
+    for i in range(len(modMatches)):
+        NameArr = modMatches[i][9:-1].split("*")
         NPI = NameToNPI(NameArr[1],NameArr[0])
-        i = i[:-1] + modStr + NPI  + '~'
-        print (i)
-    print (matches)
-    print (modMatches)
+        modMatches[i] = modMatches[i][:-1] + modStr + NPI  + "~"
+
+    print (content)
+    print ('-----------------------------------')
+
+
+    for j in range(len(matches)):
+        content = content.replace(matches[j], modMatches[j])
+
+    print (content)
 
 """
 this for OSU

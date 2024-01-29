@@ -1,8 +1,8 @@
 import requests
 import json
 
-firstName = 'CHRISTOPHER'
-lastName = ' KLOTZ'
+firstName = 'JESSICA'
+lastName = ' KELLER'
 
 q1 = 'https://npiregistry.cms.hhs.gov/api/?number=&enumeration_type=&taxonomy_description=&name_purpose=&first_name=' 
 q2 = '&use_first_name_alias=&last_name='
